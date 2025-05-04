@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainPage</class>
+ <widget class="QWidget" name="MainPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>448</width>
+    <height>385</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Main Page</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+        QWidget#MainPage {
+            background-color: #5D3FD3;
+        }
+
+        QLabel {
+            color:  #FFFFFF;
+            font-weight: bold;
+        }
+
+        QPushButton {
+            background-color: #5D3FD3;
+            color: #FFFFFF;
+            border-radius: 10px;
+            border: 2px solid #000000;
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        QPushButton:hover {
+            background-color: #000000;
+            color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+        }
+
+        QPushButton:pressed {
+            background-color: #4B2CA7;
+            border: 2px solid #FFFFFF;
+        }
+    </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>85</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>22</pointsize>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Westernify</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="horizontalWidget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label_user">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Welcome back!</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="verticalWidget" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_image">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton">
+           <property name="text">
+            <string>Upload new image...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="playlistButton">
+     <property name="text">
+      <string>Playlist</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="uploadButton">
+     <property name="text">
+      <string>Upload</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="searchButton">
+     <property name="text">
+      <string>Search</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="goBackButton">
+     <property name="text">
+      <string>Go Back</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainPage</receiver>
+   <slot>openSearchPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>63</x>
+     <y>340</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>268</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>uploadButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainPage</receiver>
+   <slot>openUploadView()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>286</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>339</x>
+     <y>260</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainPage</receiver>
+   <slot>UploadImage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>364</x>
+     <y>216</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>197</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>openSearchPage()</slot>
+  <slot>openUploadView()</slot>
+  <slot>UploadImage()</slot>
+ </slots>
+</ui>
